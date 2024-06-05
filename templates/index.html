@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Garage</title>
+</head>
+<body>
+    <h1>Car List</h1>
+    <ul>
+        {% for car in cars %}
+        <li>{{ car.brand }} {{ car.model }} ({{ car.year }}) - Owner: <a href="{% url 'owner_detail' car.owner.id %}">{{ car.owner.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_car' %}">Add Car</a> | <a href="{% url 'add_owner' %}">Add Owner</a>
+</body>
+</html>

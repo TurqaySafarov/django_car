@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Owner Detail</title>
+</head>
+<body>
+    <h1>{{ owner.name }}</h1>
+    <p>Email: {{ owner.email }}</p>
+    <h2>Car:</h2>
+    <p>{{ owner.car.brand }} {{ owner.car.model }} ({{ owner.car.year }})</p>
+    <a href="{% url 'index' %}">Back to Car List</a>
+</body>
+</html>
